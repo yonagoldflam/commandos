@@ -36,7 +36,7 @@ namespace commandos
         }
 
 
-        public void Attack()
+        public virtual void Attack()
         {
             //נצמד להוראות ולא משנה סטטוס
             Console.WriteLine($"soldier {Name} is attack");
