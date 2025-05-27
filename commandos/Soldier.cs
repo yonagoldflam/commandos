@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace commandos
 {
-    public class Soldier
-    {
-        public string Name { get; set; }
-        public int Id { get; set; }
+    public class Commando
+    { 
+        private string Name;
+        public string CodeName { get; set; }
         public string[] Tools { get; set; } = { "hammer", "chisel", "rope", "bag", "lantern" };
         public string Status { get; set; }
 
 
-        public Soldier(string name, int id, string status)
+        public Commando(string name, string code_name, string status)
         {
             Name = name.ToLower();
-            Id = id;
+            CodeName = code_name;
             Status = status.ToLower();           
         }
 
@@ -41,5 +41,28 @@ namespace commandos
             //נצמד להוראות ולא משנה סטטוס
             Console.WriteLine($"soldier {Name} is attack");
         }
+
+
+        public string SayName(string commanderRank)
+        {
+            if (commanderRank.ToUpper() == "GENERAL")
+            {
+                return Name;
+            }
+            else if (commanderRank.ToUpper() == "COLONEL")
+            {
+                return CodeName;
+            }
+            else
+            {
+                return "The information is classified. You will not be able to access it!!!";
+            }
+
+        }
+
+
+
+
+
     }
 }
