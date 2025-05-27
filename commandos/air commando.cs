@@ -8,7 +8,7 @@ namespace commandos
 {
     public class AirCommando : Commando
     {
-        public AirCommando(string Name, string code_name, string Status) : base(Name, code_name, Status)
+        public AirCommando(string Name, string CodeName, string Status) : base(Name, CodeName, Status)
         {
 
         }
@@ -19,9 +19,9 @@ namespace commandos
             Console.WriteLine("parachute was made");
         }
 
-        public override void Attack()
+        public override void Attack(Enemy e)
         {
-            Console.WriteLine("air commando soldier attacks");
+            Console.WriteLine($"air commando soldier attacks {e}");
         }
     }
 }

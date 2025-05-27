@@ -14,9 +14,9 @@ namespace commandos
         }
 
 
-        public override void Attack()
+        public override void Attack(Enemy e)
         {
-            Console.WriteLine("sea commando soldier attacks");
+            Console.WriteLine($"sea commando soldier attacks {e}");
         }
     }
 }
