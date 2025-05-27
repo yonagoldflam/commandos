@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace commandos
 {
     public class Commando
-    { 
+    {
         private string Name;
-        public string CodeName { get; set; }
+        private string codeName { get; set; }
         public string[] Tools { get; set; } = { "hammer", "chisel", "rope", "bag", "lantern" };
         public string Status { get; set; }
 
@@ -18,7 +18,7 @@ namespace commandos
         {
             Name = name.ToLower();
             CodeName = code_name;
-            Status = status.ToLower();           
+            Status = status.ToLower();
         }
 
 
@@ -61,7 +61,11 @@ namespace commandos
         }
 
 
-
+        public string CodeName
+        {
+            get { return codeName; }
+            set { codeName = value; }
+        }
 
 
     }
