@@ -9,6 +9,7 @@ namespace commandos
         static AirCommando Maglan;
         static SeaCommando Shayettet;
         static Commando[] Soldiers;
+        static Enemy Ahmmad;
 
         static void Main(string[] args)
         {
@@ -24,6 +25,7 @@ namespace commandos
             Maglan = new AirCommando("avraham", "avi", "hiding");
             Shayettet = new SeaCommando("eliyahu", "eli", "hiding");
             Soldiers = [Damen, Maglan, Shayettet];
+            Ahmmad = new Enemy("ahmad", "live");
  
         }
 
@@ -41,6 +43,8 @@ namespace commandos
             {
                 i.Attack();
             }
+            Console.WriteLine($"name: {Ahmmad.Name} status: {Ahmmad.Status} lives: {Ahmmad.Lives}");
+            Ahmmad.Shout();
 
 
 
