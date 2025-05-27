@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("commandos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5f2bc94f13c5097ca78331ccdbd1504554befd8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74faf11838d544493c7ab681c861767c60d05c23")]
 [assembly: System.Reflection.AssemblyProductAttribute("commandos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("commandos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
