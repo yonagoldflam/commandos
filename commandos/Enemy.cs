@@ -11,7 +11,7 @@ namespace commandos
         public string Name { get; set; }
         public int Lives { get; set; } = 100;
         public string Status { get; set; }
-        public Enemy(string name, string status)
+        public Enemy(string name, string status = "live")
         {
             Name = name;
             Status = status;
