@@ -8,6 +8,7 @@ namespace commandos
         static Weapon M16;
         static AirCommando Maglan;
         static SeaCommando Shayettet;
+        static Commando[] Soldiers;
 
         static void Main(string[] args)
         {
@@ -22,6 +23,8 @@ namespace commandos
             M16 = new Weapon("m16", "USA", 62);
             Maglan = new AirCommando("avraham", "avi", "hiding");
             Shayettet = new SeaCommando("eliyahu", "eli", "hiding");
+            Soldiers = [Damen, Maglan, Shayettet];
+ 
         }
 
         static void TestMembers()
@@ -30,8 +33,17 @@ namespace commandos
             Damen.CodeName = "Izik";
             Console.WriteLine($"name: {Damen.SayName("general")}. code name: {Damen.CodeName}. tools: {Damen.Tools[4]}. status: {Damen.Status}");
             Console.WriteLine($"name: {M16.Name}. maker: {M16.Maker}. sum balls: {M16.SumBalls}");
-            Console.WriteLine($"name: {Maglan.SayName("general")}. code name: {Maglan.CodeName}. tools: {Maglan.Tools[4]}. status: {Maglan.Status}");
+            Console.WriteLine($"name: {Maglan.SayName("general")}. code name: {Maglan.CodeName}. tools: {Maglan.Tools[4]}. status: {Maglan.Status} ");
             Console.WriteLine($"name: {Shayettet.SayName("general")}. code name: {Shayettet.CodeName}. tools: {Shayettet.Tools[4]}. status: {Shayettet.Status}");
+            Maglan.Attack();
+            Damen.Attack();
+            foreach (var i in Soldiers)
+            {
+                i.Attack();
+            }
+
+
+
         }
     }
 

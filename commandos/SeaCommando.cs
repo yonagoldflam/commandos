@@ -14,9 +14,9 @@ namespace commandos
         }
 
 
-        public void Swimming()
+        public override void Attack()
         {
-            Console.WriteLine("Swimming was performed");
+            Console.WriteLine("sea commando soldier attacks");
         }
     }
 }

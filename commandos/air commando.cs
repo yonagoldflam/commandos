@@ -18,5 +18,10 @@ namespace commandos
         {
             Console.WriteLine("parachute was made");
         }
+
+        public override void Attack()
+        {
+            Console.WriteLine("air commando soldier attacks");
+        }
     }
 }
