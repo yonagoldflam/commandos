@@ -12,3 +12,4 @@ C:\Users\HOME\source\repos\commandos\commandos\obj\Debug\net8.0\refint\commandos
 C:\Users\HOME\source\repos\commandos\commandos\obj\Debug\net8.0\commandos.pdb
 C:\Users\HOME\source\repos\commandos\commandos\obj\Debug\net8.0\commandos.genruntimeconfig.cache
 C:\Users\HOME\source\repos\commandos\commandos\obj\Debug\net8.0\ref\commandos.dll
+C:\Users\HOME\source\repos\commandos\commandos\obj\Debug\net8.0\commandos.sourcelink.json
