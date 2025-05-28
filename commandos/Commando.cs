@@ -10,15 +10,47 @@ namespace commandos
     {
         private string Name;
         private string codeName { get; set; }
-        public string[] Tools { get; set; } = { "hammer", "chisel", "rope", "bag", "lantern" };
+        public string[] DbTools { get; set; } = { "hammer", "chisel", "rope", "bag", "lantern" };
+        public List<string> Tools { get; set; } = new List<string>();
         public string Status { get; set; }
 
-
+         
         public Commando(string name, string code_name, string status)
         {
             Name = name.ToLower();
             CodeName = code_name;
             Status = status.ToLower();
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine("Press 1 to add Hammer\r\nPress 2 to add Chisel\r\nPress 3 to add Rope\r\nPress 4 to add Bag\r\nPress 5 to add lantern\r\nTo finish - press any other key");
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        Tools.Add(DbTools[0]);
+                        break;
+
+                    case "2":
+                        Tools.Add(DbTools[1]);
+                        break;
+
+                    case "3":
+                        Tools.Add(DbTools[2]);
+                        break;
+
+                    case "4":
+                        Tools.Add(DbTools[3]);
+                        break;
+
+                    case "5":
+                        Tools.Add(DbTools[4]);
+                        break;
+
+                    default:
+                        flag = false;
+                        break;
+                }
+            }
         }
 
 

@@ -10,18 +10,20 @@ namespace commandos
     {
 
         
-            public List<Weapon> Weapons = new List<Weapon>();
-            public void CreatWeaponObject()
-            {
-                Console.WriteLine("enter the name");
-                string name = Console.ReadLine()!;
-                Console.WriteLine("enter the maker");
-                string maker = Console.ReadLine()!;
-                Console.WriteLine("enter the balls");
-                int balls = int.Parse(Console.ReadLine()!);
-                
-                Weapons.Add(new Weapon(name,maker,balls));
-            }
+        public List<Weapon> Weapons = new List<Weapon>();
+        public void CreatWeaponObject()
+        {
+            Console.WriteLine("enter the name");
+            string name = Console.ReadLine()!;
+            Console.WriteLine("enter the maker");
+            string maker = Console.ReadLine()!;
+            Console.WriteLine("enter the balls");
+            int balls = int.Parse(Console.ReadLine()!);
+            
+            Weapons.Add(new Weapon(name,maker,balls));
+            Console.WriteLine("The object is saved in the system (:\n");
+
+        }
         
     }
 }
