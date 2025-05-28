@@ -13,6 +13,7 @@ namespace commandos
         {
             Console.WriteLine("enter the enemy name");
             Enemys.Add(new Enemy(Console.ReadLine()!));
+            Console.WriteLine("The object is saved in the system (:\n");
         }
     }
 }
