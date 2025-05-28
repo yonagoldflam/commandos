@@ -9,6 +9,7 @@ namespace commandos
     public class EnemyFactory
     {
         public List<Enemy> Enemys = new List<Enemy>();
+
         public void CreatEnemy()
         {
             Console.WriteLine("enter the enemy name");
