@@ -21,22 +21,21 @@ namespace commandos
         }
 
 
-        public void Shoot()
+        public bool Shoot()
         {
             if (SumBalls > 0)
             {
                 SumBalls -= 1;
-                Console.WriteLine("shoot done!!!!");
+                Console.WriteLine("shoot done!!!! ");
+                return true;
             }
             else
             {
-                Console.WriteLine("There are not enough balls!!");
+                Console.WriteLine($"There are not enough balls!! {SumBalls} balls left");
+                return false;
             }
 
-
         }
-
-
 
     }
 }

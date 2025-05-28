@@ -20,6 +20,12 @@ namespace commandos
             Name = name.ToLower();
             CodeName = code_name;
             Status = status.ToLower();
+            AddTools();
+            
+        }
+
+        public void AddTools()
+        {
             bool flag = true;
             while (flag)
             {
@@ -68,10 +74,14 @@ namespace commandos
         }
 
 
-        public virtual void Attack(Enemy e)
+        public virtual void Attack(Enemy enemy)
         {
-            //נצמד להוראות ולא משנה סטטוס
-            Console.WriteLine($"soldier {Name} is attacking {e.Name}");
+            bool succeeded = enemy.SubLive();
+
+
+            //נצמד להוראות ולא משנה סטטוס            
+            Console.WriteLine(succeeded ? $"soldier {Name} is attacking {enemy.Name}": "error");
+
         }
 
 

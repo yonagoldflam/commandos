@@ -21,7 +21,7 @@ namespace commandos
 
         public override void Attack(Enemy e)
         {
-            Console.WriteLine($"air commando soldier attacks {e}");
+            Console.WriteLine($"air commando soldier attacks {e.Name}");
         }
     }
 }

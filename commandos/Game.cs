@@ -9,9 +9,9 @@ namespace commandos
     public class Game
     {
         //אפשר לגשת לרשימת האובייקטים על ידי אובייקטי הפקטוריז
-        CommandoFactory CF = new CommandoFactory(); 
-        WeaponFactory WF = new WeaponFactory();
-        EnemyFactory EF = new EnemyFactory();
+        CommandoFactory commandoFactory = new CommandoFactory(); 
+        WeaponFactory weaponFactory = new WeaponFactory();
+        EnemyFactory enemyFactory = new EnemyFactory();
         public void CreateObjects()
         {
             bool flag = true;
@@ -21,26 +21,59 @@ namespace commandos
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        CF.CreatCommandoObject();
+                        commandoFactory.CreatCommandoObject();
                         break;
 
                     case "2":
-                        WF.CreatWeaponObject();
+                        weaponFactory.CreatWeaponObject();
                         break;
 
                     case "3":
-                        EF.CreatEnemy();
+                        enemyFactory.CreatEnemy();
                         break;
                     
                     default:
                         flag = false;
                         break;
                 }
-
-
             }
         }
 
-        
+        public void TestObjects()
+        {
+            Console.WriteLine("press 1 to show commandos\npress 2 to show Weapons \npress 3 to show Enemys");
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    foreach (var c in commandoFactory.Commandos)
+                    {
+                        Console.WriteLine("enter rank");
+                        Console.WriteLine(c.SayName(Console.ReadLine()!));
+                        foreach (var i in c.Tools)
+                        {
+                            Console.WriteLine(i);
+                        }
+                        c.Attack(enemyFactory.Enemys[0]);
+                    }
+                    break;
+
+                case "2":
+                    foreach (var c in weaponFactory.Weapons)
+                    {
+                        Console.WriteLine(c.Name);
+                        Console.WriteLine(c.SumBalls);
+                        c.Shoot();
+                    }
+                    break;
+
+                case "3":
+                    foreach (var c in enemyFactory.Enemys)
+                    {
+                        Console.WriteLine(c.Lives);
+                        c.Shout();
+                    }
+                    break;
+            }
+        }
     }
 }
